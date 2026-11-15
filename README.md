@@ -3,7 +3,7 @@
 **Autora:** Ana Lucia Hernandez (Grupo B, individual) - **Competencia Kaggle:** `labo-1-virtual-2026-analista-jr`
 
 ## Archivo entregado
-`KA9390_s125_2100.csv`: ensamble de **125 modelos LightGBM** (5 corridas de 25 semillas), entrenados **sin los meses 202003 a 202012**, con **2100 envios** (los 2100 clientes de mayor probabilidad en 202109). Es el archivo marcado en *Select* en Kaggle.
+`KA9390_s125_2100.csv`: ensamble de **125 modelos LightGBM** (5 corridas de 25 semillas), entrenados **sin los meses 202003 a 202012**, con **2100 envios** (los 2100 clientes de mayor probabilidad en 202109). 
 
 ## Como reproducir EXACTAMENTE ese archivo
 
