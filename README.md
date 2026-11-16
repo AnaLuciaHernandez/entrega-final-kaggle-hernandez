@@ -44,17 +44,26 @@ Para validar en el mes `m` se entrena con los meses hasta `m - 2`; la ganancia (
 * **Leaderboard publico:** no se uso para elegir. Con 80 semillas distintas del mismo modelo y el mismo corte, el puntaje publico fue de 62 a 89 (media 79.4, desvio 5.1): el publico (30 % de los datos) mide principalmente suerte de semilla.
 Resultado final y aprendizajes
 
-**Resultado. **
-El archivo entregado (KA9390_s125_2100.csv, entrenado sin 202003–202012) obtuvo 85,650 en el privado (puesto 13 de 24). Después del cierre vi los privados de otras corridas mías, no elegidas: las variantes V3 entrenadas con los meses de 2020 (por ejemplo KA9330_s25_1600, KA9350_s125_1600, KA9600_s125_1850) dieron entre 90,2 y 90,5. Es decir, sacar la pandemia costó cerca de 4,8 puntos.
+## Resultado final y aprendizajes (escrito despues del cierre)
+El archivo entregado (`KA9390_s125_2100.csv`, entrenado sin 202003 a 202012) obtuvo **85.650 en el privado** (puesto 13 de 24). Despues del cierre revise los privados de otras corridas propias que no fueron elegidas:
 
-Qué pasó con la decisión. Elegí sin2020 porque en la validación de 3 meses (202105–202107) ganaba +3,5 %. Al ampliar a 6 meses (202102–202107) la ventaja no se sostenía: ganaba en 2 de 6 meses y el promedio era −1,2 %. Me quedé con sin2020 apoyándome en los 3 meses más recientes, pero en 202109 ocurrió lo contrario.
+| Archivo | Entrenado con | Privado |
+|---|---|---|
+| `KA9330_s25_1600` | con 2020 (V3, 25 semillas) | 90.549 |
+| `KA9330_s25_1900` | con 2020 | 90.478 |
+| `KA9350_s125_1600` y `KA9450_m250_1600` | con 2020 (125 y 250 modelos) | 90.442 |
+| `KA9600_s125_1850` | con 2020 (semillas nuevas) | 90.192 |
+| **`KA9390_s125_2100` (entregado)** | **sin 202003 a 202012** | **85.650** |
 
-Qué aprendí.
+Sacar los meses de pandemia costo cerca de **4.8 puntos** en el privado, de forma consistente en todas las variantes con 2020.
 
-Una validación sobre pocos meses puede engañar. Con evidencia mixta, la opción prudente era el modelo sin ese cambio.
-El cambio que más importó no fue el corte, ni las semillas, ni el número de modelos (25, 125 y 250 dieron lo mismo), sino qué meses entrenar.
-El leaderboard público no sirvió para elegir: las corridas que dieron 75 a 85 en el público hicieron 90 en el privado, y la semilla con 93,7 en el público hizo 84,1 en el privado.
-El ensamble de 125 modelos sí cumplió su rol: ganó a 21 de 23 semillas sueltas del mismo modelo.
+**Que paso con la decision.** Se eligio `sin2020` porque en la validacion de 3 meses (202105 a 202107) ganaba +3.5 %. Al ampliar a 6 meses (202102 a 202107) la ventaja no se sostenia: ganaba en 2 de 6 meses y el promedio era -1.2 %. Se mantuvo `sin2020` apoyandose en los 3 meses mas recientes, pero en 202109 ocurrio lo contrario.
+
+**Aprendizajes.**
+1. Una validacion sobre pocos meses puede enganar. Con evidencia mixta, la opcion prudente era el modelo sin ese cambio.
+2. Lo que mas importo fue que meses se usan para entrenar; el corte (1600 a 2400 se mueve solo unas decimas), las semillas y la cantidad de modelos (25, 125 y 250 dieron lo mismo) importaron mucho menos.
+3. El leaderboard publico no sirvio para elegir: corridas con 75 a 85 en el publico hicieron 90 en el privado, y la semilla con 93.7 en el publico hizo 84.1 en el privado.
+4. El ensamble de 125 modelos cumplio su rol: le gano a 21 de 23 semillas sueltas del mismo modelo (privado promedio de una semilla suelta: 80.7).
 ## Estructura
 ```
 README.md
